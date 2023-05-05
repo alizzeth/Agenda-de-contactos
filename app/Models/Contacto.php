@@ -10,7 +10,7 @@ class Contacto extends Model
     use HasFactory;
     
     public function evento(){
-    return $this->belongsTo(Evento::class);
+    return $this->hasmany(Evento::class);
         
     }
 

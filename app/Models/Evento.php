@@ -9,6 +9,6 @@ class Evento extends Model
 {
     use HasFactory;
     public function contactos(){
-        return $this->hasMany(Contacto::class);
+        return $this->belongsTo(Contacto::class);
     }
 }

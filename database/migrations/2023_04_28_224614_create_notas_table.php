@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('texto');
             $table->string('fecha');
-            $table->string('contacto_id');
+            $table->unsignedInteger('contacto_id');
             $table->timestamps();
         });
     }

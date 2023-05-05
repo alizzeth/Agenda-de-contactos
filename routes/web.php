@@ -28,15 +28,15 @@ Route::get('/contacto', [ContactoController::class,'index'])
 
 ///Ruta para mostrar un solo contacto: READ o lectura de estudiantes
 Route::get('/contacto/{id}', [ContactoController::class,'show'])
-    ->name('contacto.mostrar')->where('id', '[0-9]+');
+    ->name('contacto.show')->where('id', '[0-9]+');
 
 //Ruta de CREAR contacto
 Route::get('/contacto/crear', [ContactoController::class,'create'])
-    ->name('contacto.crear');
+    ->name('contacto.create');
 
 //segunda ruta de crear contacto con metodo post (ruta que recibe el formulario)
 Route::post('/contacto/crear', [ContactoController::class,'store'])
-    ->name('contacto.guardar');
+    ->name('contacto.store');
 
 //Ruta mostrar formulario editar contacto/actualizar
 Route::get('/contacto/{id}/editar', [ContactoController::class, 'edit'])
@@ -47,7 +47,7 @@ Route::put('/contacto/{id}/editar', [ContactoController::class,'update'])
 
 //Ruta para ELIMINAR
 Route::delete('/contacto/{id}/borrar', [ContactoController::class,'destroy'])
-    ->name('contacto.borrar')->where('id', '[0-9]+');
+    ->name('contacto.destroy')->where('id', '[0-9]+');
 
 
 /*****************************************************************************************/
@@ -57,15 +57,15 @@ Route::get('/evento', [EventoController::class,'index'])
 
 ///Ruta para mostrar un solo contacto: READ o lectura de estudiantes
 Route::get('/evento/{id}', [EventoController::class,'show'])
-    ->name('evento.mostrar')->where('id', '[0-9]+');
+    ->name('evento.show')->where('id', '[0-9]+');
 
 //Ruta de CREAR contacto
 Route::get('/evento/crear', [EventoController::class,'create'])
-    ->name('evento.crear');
+    ->name('evento.create');
 
 //segunda ruta de crear contacto con metodo post (ruta que recibe el formulario)
 Route::post('/evento/crear', [EventoController::class,'store'])
-    ->name('evento.guardar');
+    ->name('evento.store');
 
 //Ruta mostrar formulario editar contacto/actualizar
 Route::get('/evento/{id}/editar', [EventoController::class, 'edit'])
@@ -76,7 +76,7 @@ Route::put('/evento/{id}/editar', [EventoController::class,'update'])
 
 //Ruta para ELIMINAR
 Route::delete('/evento/{id}/borrar', [EventoController::class,'destroy'])
-    ->name('evento.borrar')->where('id', '[0-9]+');
+    ->name('evento.destroy')->where('id', '[0-9]+');
 
     /*********************************************************************************************************/
 Route::get('/nota', [NotasController::class,'index'])
@@ -84,15 +84,15 @@ Route::get('/nota', [NotasController::class,'index'])
 
 ///Ruta para mostrar un solo contacto: READ o lectura de estudiantes
 Route::get('/nota/{id}', [NotasController::class,'show'])
-    ->name('nota.mostrar')->where('id', '[0-9]+');
+    ->name('nota.show')->where('id', '[0-9]+');
 
 //Ruta de CREAR contacto
 Route::get('/nota/crear', [NotasController::class,'create'])
-    ->name('nota.crear');
+    ->name('nota.create');
 
 //segunda ruta de crear contacto con metodo post (ruta que recibe el formulario)
 Route::post('/nota/crear', [NotasController::class,'store'])
-    ->name('nota.guardar');
+    ->name('nota.store');
 
 //Ruta mostrar formulario editar contacto/actualizar
 Route::get('/nota/{id}/editar', [NotasController::class, 'edit'])
@@ -103,4 +103,4 @@ Route::put('/nota/{id}/editar', [NotasController::class,'update'])
 
 //Ruta para ELIMINAR
 Route::delete('/nota/{id}/borrar', [NotasController::class,'destroy'])
-    ->name('nota.borrar')->where('id', '[0-9]+');
+    ->name('nota.destroy')->where('id', '[0-9]+');
